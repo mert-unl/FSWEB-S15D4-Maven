@@ -35,18 +35,16 @@ checkForPalindrome("I did, did I?");
         // / KAÇ KEZ BÖLÜNDÜĞÜNÜ VERİYOR
 
         int sayi = input;
-        LinkedList a = new LinkedList();
+        LinkedList<Integer> a = new LinkedList();
 
-        while (sayi > 1) {
+        while (sayi > 0) {
             int kalan1 = sayi % 2;
 
             a.addFirst(kalan1);
 
             sayi = sayi / 2;
         }
-        if (sayi < 2) {
-            a.addFirst(sayi);
-        }
+
         String b = a.toString().replaceAll("[^a-zA-Z0-9]", "");
         System.out.println(b);
 
